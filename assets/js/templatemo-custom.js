@@ -106,7 +106,7 @@
               currLink.removeClass("active");
           }
       });
-  }
+  }4
 
 
 
