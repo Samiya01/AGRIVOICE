@@ -168,8 +168,10 @@
             <div class="row">
               <div class="col-lg-6">
                 <fieldset>
-                  <button type="submit"><i class="fa fa-microphone"></i></button>
-                  <input type="text" placeholder="Search..."/>
+                  <button onclick="handleSpeak(event)" type="submit"><i class="fa fa-microphone"></i></button>
+                  <button onclick="handleSend(event)" type="submit"><i class="fa fa-paper-plane"></i></button>
+                  <textarea onkeyup="typeText(event)"  id="spokenText" type="text" placeholder="Search..." ></textarea>
+                  <textarea contenteditable="false"  id="responseText" type="text" placeholder="your answer will be shown right here!!!" ></textarea>
                 </fieldset>
               </div>
             </div>
@@ -178,7 +180,7 @@
         <!-- sample end -->
 
         <div class="col-lg-6 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.25s">
-          <form id="contact" action="" method="post">
+          <form id="contact" action="" method="post" style="display: none;">
             <div class="row">
               <div class="col-lg-6">
                 <fieldset>
@@ -188,12 +190,14 @@
               </div>
             </div>
           </form>
+          <img src="" id="generated" alt="sample response image" width="256" height="256" >
+
         </div>
 
         <div class="col-lg-6 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.25s">
           <form id="contact" action="" method="post">
             <div class="row">
-              <div class="col-lg-12">
+              <div class="col-lg-12" style="display: none;">
                 <fieldset>
                   <button type="submit"><i class="fa fa-comment"></i></button>
                   <input type="text" placeholder="Search..."/>
@@ -401,5 +405,6 @@
   <script src="assets/js/templatemo-custom.js"></script>
 
 </body>
+<script src="./assets/js/speech.js"></script>
 
 </html>
