@@ -124,7 +124,7 @@ function getResponse(txt){
     .then(response => response.json())
     .then(result => {
       // document.querySelector("#responseText").value = result.message.question.split(':::')[1]+"?\t"+result.message.answer
-      let data = result.message.answer.split("AI-bot")[1]
+      let data = result.message.answer.split("AI-bot:")[1]
       document.querySelector("#responseText").value = data
       speak(data)
     })
