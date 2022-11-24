@@ -17,8 +17,15 @@ const  surfixTextEnglish = `\n\n${aiNameEng}: `;
 const  surfixTextHindi = `\n\n${aiNameInd}: `;
 
 
+
+
 // variable ddeclaration and initialization
 var spokenText = ""
+
+
+function speak(statement){
+  speechSynthesis.speak(new SpeechSynthesisUtterance(statement))
+}
 
 if (window.hasOwnProperty('webkitSpeechRecognition')) {
 
@@ -118,6 +125,7 @@ function getResponse(txt){
     .then(result => {
       // document.querySelector("#responseText").value = result.message.question.split(':::')[1]+"?\t"+result.message.answer
       document.querySelector("#responseText").value = result.message.answer
+      speak(result.message.answer)
     })
     .catch(error => console.log('error', error));
 }
@@ -156,6 +164,10 @@ function generateImage(capt="rice leaf disease"){
     .then(response => response.text())
     .then(result =>{
       console.log(result)
-      document.querySelector("#generated").src = JSON.parse(result).url})
+      document.querySelector("#generated").src = JSON.parse(result).url
+    })
+      
     .catch(error => console.log('error', error));
 }
+
+
