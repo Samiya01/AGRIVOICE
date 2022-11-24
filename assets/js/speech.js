@@ -103,12 +103,12 @@ function handleSpeak(e){
 }
 
 function getResponse(txt){
-  txt = starterTextEng + txt
+  txt = prefixTextEnglish + txt
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
   myHeaders.append("Access-Control-Allow-Origin","*");
 
-  txt = "respond to this if an only if it relates to agriculture or geography or biology else do not answer :::" + txt
+  // txt = "respond to this if an only if it relates to agriculture or geography or biology else do not answer :::" + txt
   var raw = JSON.stringify({
     "query": txt || "examples of diseases affecting cattle and their cure"
   });
