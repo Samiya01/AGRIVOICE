@@ -113,7 +113,7 @@ function getResponse(txt){
     redirect: 'follow',
   };
 
-  fetch("https://tinyurl.com/4jth72v3/web", requestOptions)
+  fetch("https://calm-forest-14149.herokuapp.com/web", requestOptions)
     .then(response => response.json())
     .then(result => {
       // document.querySelector("#responseText").value = result.message.question.split(':::')[1]+"?\t"+result.message.answer
@@ -152,7 +152,7 @@ function generateImage(capt="rice leaf disease"){
     redirect: 'follow'
   };
 
-  fetch("https://tinyurl.com/4jth72v3/image", requestOptions)
+  fetch("https://calm-forest-14149.herokuapp.com/image", requestOptions)
     .then(response => response.text())
     .then(result =>{
       console.log(result)
