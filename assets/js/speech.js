@@ -113,7 +113,7 @@ function getResponse(txt){
     redirect: 'follow',
   };
 
-  fetch("https://tinyurl.com/4jth72v3/query", requestOptions)
+  fetch("https://tinyurl.com/4jth72v3/web", requestOptions)
     .then(response => response.json())
     .then(result => {
       // document.querySelector("#responseText").value = result.message.question.split(':::')[1]+"?\t"+result.message.answer
