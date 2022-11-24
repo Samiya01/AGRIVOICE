@@ -1,6 +1,6 @@
 // constant definitions
 
-const  aiNameEng = `AI-bot`;
+const  aiNameEng = `Agrivoice`;
 const  aiNameInd = `एआई-बॉट`;
 const  farmerNameEng = `Farmer`;
 const  farmerNameInd = `किसान`;
